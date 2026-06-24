@@ -154,3 +154,9 @@ html, body, #root {
 .font-body {
   font-family: var(--font-body);
 }
+
+/* ── Auto-play pulse ── */
+@keyframes autoPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

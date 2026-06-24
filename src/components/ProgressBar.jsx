@@ -1,4 +1,4 @@
-export default function ProgressBar({ totalSteps, consumed, scenes, currentScene }) {
+export default function ProgressBar({ totalSteps, consumed, scenes, currentScene, isAutoPlaying }) {
   if (!totalSteps || totalSteps === 0) return null
 
   const fillPercent = Math.min((consumed / totalSteps) * 100, 100)
@@ -34,6 +34,33 @@ export default function ProgressBar({ totalSteps, consumed, scenes, currentScene
           }}
         />
       </div>
+
+      {/* Auto-play indicator */}
+      {isAutoPlaying && (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: 6,
+          }}
+        >
+          <span
+            style={{
+              fontSize: 9,
+              fontWeight: 600,
+              letterSpacing: '0.1em',
+              color: 'var(--neon-cyan)',
+              background: 'rgba(0, 245, 255, 0.08)',
+              border: '1px solid rgba(0, 245, 255, 0.2)',
+              borderRadius: 4,
+              padding: '2px 8px',
+              animation: 'autoPulse 2s ease-in-out infinite',
+            }}
+          >
+            AUTO
+          </span>
+        </div>
+      )}
 
       {/* Scene dots */}
       {scenes && scenes.length > 0 && (

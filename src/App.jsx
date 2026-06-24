@@ -59,11 +59,16 @@ export default function App() {
   /* ── Global Keyboard Navigation ── */
   const handleKeyDown = useCallback(
     (e) => {
-      if (e.key === 'Enter' || e.key === 'ArrowRight') {
+      if (e.key === ' ' || e.code === 'Space') {
         e.preventDefault()
+        sceneManager.toggleAutoPlay()
+      } else if (e.key === 'Enter' || e.key === 'ArrowRight') {
+        e.preventDefault()
+        if (sceneManager.isAutoPlaying) sceneManager.stopAutoPlay()
         sceneManager.advanceStep()
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault()
+        if (sceneManager.isAutoPlaying) sceneManager.stopAutoPlay()
         sceneManager.prevStep()
       }
     },
@@ -89,6 +94,7 @@ export default function App() {
         consumed={sceneManager.totalConsumed}
         scenes={SCENES}
         currentScene={sceneManager.currentScene}
+        isAutoPlaying={sceneManager.isAutoPlaying}
       />
 
       {/* Scene transitions */}

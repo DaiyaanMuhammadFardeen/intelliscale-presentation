@@ -1,8 +1,25 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
+
+const AUTO_PLAY_DELAY = 3000; // ms between auto-advance steps
 
 export function useSceneManager(sceneConfigs) {
   const [currentScene, setCurrentScene] = useState(0);
   const [step, setStep] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(false);
+  const timerRef = useRef(null);
+  const sceneRef = useRef(currentScene);
+  const stepRef = useRef(step);
+
+  // Keep refs in sync with state
+  sceneRef.current = currentScene;
+  stepRef.current = step;
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []);
 
   const maxStepsForScene = useMemo(
     () => (sceneConfigs[currentScene] ? sceneConfigs[currentScene].steps : 0),
@@ -65,6 +82,66 @@ export function useSceneManager(sceneConfigs) {
     setStep(0);
   }, []);
 
+  /* ─── Auto-Play Logic ─── */
+  const stopAutoPlay = useCallback(() => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    setIsAutoPlaying(false);
+  }, []);
+
+  const toggleAutoPlay = useCallback(() => {
+    setIsAutoPlaying((prev) => {
+      if (prev) {
+        // Currently playing → stop
+        if (timerRef.current) {
+          clearInterval(timerRef.current);
+          timerRef.current = null;
+        }
+        return false;
+      } else {
+        // Currently stopped → start
+        return true;
+      }
+    });
+  }, []);
+
+  // When isAutoPlaying changes, manage the interval
+  useEffect(() => {
+    if (isAutoPlaying) {
+      timerRef.current = setInterval(() => {
+        const s = stepRef.current;
+        const sc = sceneRef.current;
+        const maxSteps = sceneConfigs[sc]?.steps ?? 0;
+
+        if (s < maxSteps - 1) {
+          // Advance step within current scene
+          setStep(s + 1);
+        } else if (sc < sceneConfigs.length - 1) {
+          // Move to next scene
+          setCurrentScene(sc + 1);
+          setStep(0);
+        } else {
+          // Last step of last scene — stop auto-play
+          stopAutoPlay();
+        }
+      }, AUTO_PLAY_DELAY);
+    } else {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    }
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+  }, [isAutoPlaying, sceneConfigs, stopAutoPlay]);
+
   return {
     currentScene,
     step,
@@ -78,5 +155,8 @@ export function useSceneManager(sceneConfigs) {
     isLastStep,
     isFirstScene,
     isLastScene,
+    isAutoPlaying,
+    toggleAutoPlay,
+    stopAutoPlay,
   };
 }

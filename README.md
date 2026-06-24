@@ -61,8 +61,9 @@ npm run preview
 |-----|--------|
 | `Enter` / `→` | Advance to next step or scene |
 | `←` | Go back one step |
+| `Space` | Toggle auto-play mode (3s per step) |
 
-Each scene has multiple steps — content reveals progressively as you navigate forward.
+Each scene has multiple steps — content reveals progressively as you navigate forward. Auto-play advances through all scenes automatically and stops at the end. Pressing any arrow key or Enter during auto-play will pause it.
 
 ## Project Structure
 
