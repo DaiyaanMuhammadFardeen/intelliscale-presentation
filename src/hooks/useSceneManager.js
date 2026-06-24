@@ -1,6 +1,6 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 
-const AUTO_PLAY_DELAY = 3000; // ms between auto-advance steps
+const AUTO_PLAY_DELAY = 4000; // ms between auto-advance steps
 
 export function useSceneManager(sceneConfigs) {
   const [currentScene, setCurrentScene] = useState(0);
