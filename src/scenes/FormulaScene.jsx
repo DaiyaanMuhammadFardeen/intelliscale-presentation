@@ -79,7 +79,7 @@ function Arrow({ label, color }) {
       <span
         style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: 7,
+          fontSize: 11,
           color: 'var(--text-dim)',
           whiteSpace: 'nowrap',
         }}
@@ -345,7 +345,7 @@ export default function FormulaScene({ step }) {
                   style={{
                     color: 'var(--neon-cyan)',
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 'clamp(0.65rem, 1vw, 0.8rem)',
+                    fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
                   }}
                 >
                   predicted_rps
@@ -374,7 +374,7 @@ export default function FormulaScene({ step }) {
                   style={{
                     color: 'rgb(var(--emerald-rgb))',
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 'clamp(0.65rem, 1vw, 0.8rem)',
+                    fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
                   }}
                 >
                   cpu_threshold%
@@ -403,7 +403,7 @@ export default function FormulaScene({ step }) {
                   style={{
                     color: 'var(--neon-gold)',
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 'clamp(0.65rem, 1vw, 0.8rem)',
+                    fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
                   }}
                 >
                   clamp()
@@ -576,7 +576,7 @@ export default function FormulaScene({ step }) {
                 <div
                   style={{
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 8,
+                    fontSize: 11,
                     color: 'var(--text-dim)',
                     marginTop: 4,
                   }}
@@ -606,7 +606,7 @@ export default function FormulaScene({ step }) {
                 <div
                   style={{
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 8,
+                    fontSize: 11,
                     color: 'var(--text-dim)',
                     marginTop: 4,
                   }}
@@ -636,7 +636,7 @@ export default function FormulaScene({ step }) {
                 <div
                   style={{
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 8,
+                    fontSize: 11,
                     color: 'var(--text-dim)',
                     marginTop: 4,
                   }}
@@ -666,7 +666,7 @@ export default function FormulaScene({ step }) {
                 <div
                   style={{
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 8,
+                    fontSize: 11,
                     color: 'var(--text-dim)',
                     marginTop: 4,
                   }}
@@ -775,7 +775,7 @@ export default function FormulaScene({ step }) {
               bottom: '4vh',
               left: '50%',
               transform: 'translateX(-50%)',
-              fontSize: 'clamp(0.65rem, 1vw, 0.75rem)',
+              fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
               color: 'var(--text-dim)',
               textAlign: 'center',
               letterSpacing: '0.01em',

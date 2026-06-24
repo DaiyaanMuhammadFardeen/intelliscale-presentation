@@ -464,7 +464,7 @@ export default function ArchitectureScene({ step }) {
                 <div
                   style={{
                     fontFamily: 'var(--font-mono)',
-                    fontSize: '0.6rem',
+                    fontSize: '0.8rem',
                     color: 'var(--text-dim)',
                     marginTop: 4,
                     textAlign: 'center',
@@ -486,7 +486,7 @@ export default function ArchitectureScene({ step }) {
                       background: 'var(--neon-green)',
                       color: 'var(--text-inverse)',
                       fontFamily: 'var(--font-mono)',
-                      fontSize: '0.5rem',
+                      fontSize: '0.7rem',
                       fontWeight: 700,
                       padding: '4px 8px',
                       borderRadius: 12,
@@ -735,7 +735,7 @@ export default function ArchitectureScene({ step }) {
             <div
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: '0.55rem',
+                fontSize: '0.75rem',
                 color: 'var(--text-dim)',
                 marginTop: 4,
               }}

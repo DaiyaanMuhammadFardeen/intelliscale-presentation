@@ -94,7 +94,7 @@ function NodeCard({ node, step, forecastVisible, loadOverride }) {
             position: 'absolute',
             top: 6,
             right: 8,
-            fontSize: '0.6rem',
+            fontSize: '0.8rem',
             filter: 'drop-shadow(0 0 3px rgba(var(--soft-purple-rgb),0.6))',
           }}
         >
@@ -106,7 +106,7 @@ function NodeCard({ node, step, forecastVisible, loadOverride }) {
       <div
         style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: '0.65rem',
+          fontSize: '0.85rem',
           color: 'var(--text-dim)',
           marginBottom: 4,
         }}
@@ -122,7 +122,7 @@ function NodeCard({ node, step, forecastVisible, loadOverride }) {
               display: 'flex',
               justifyContent: 'space-between',
               fontFamily: 'var(--font-mono)',
-              fontSize: '0.5rem',
+              fontSize: '0.7rem',
               color: 'var(--text-dim)',
               marginBottom: 2,
             }}
@@ -160,7 +160,7 @@ function NodeCard({ node, step, forecastVisible, loadOverride }) {
             display: 'flex',
             justifyContent: 'space-between',
             fontFamily: 'var(--font-mono)',
-            fontSize: '0.5rem',
+            fontSize: '0.7rem',
             color: 'var(--text-dim)',
             marginBottom: 2,
           }}
@@ -205,7 +205,7 @@ function NodeCard({ node, step, forecastVisible, loadOverride }) {
               display: 'flex',
               justifyContent: 'space-between',
               fontFamily: 'var(--font-mono)',
-              fontSize: '0.42rem',
+              fontSize: '0.7rem',
               color: 'var(--text-dim)',
             }}
           >
@@ -217,7 +217,7 @@ function NodeCard({ node, step, forecastVisible, loadOverride }) {
               display: 'flex',
               justifyContent: 'space-between',
               fontFamily: 'var(--font-mono)',
-              fontSize: '0.42rem',
+              fontSize: '0.7rem',
               color: forecast.down ? 'var(--emerald)' : forecast.up ? 'var(--alert-red)' : 'var(--text-dim)',
             }}
           >
@@ -608,7 +608,7 @@ export default function GhostScene({ step }) {
             left: '50%',
             transform: 'translateX(-50%)',
             fontFamily: 'var(--font-mono)',
-            fontSize: '0.6rem',
+            fontSize: '0.8rem',
             color: 'var(--neon-purple)',
             zIndex: 25,
             whiteSpace: 'nowrap',
@@ -692,7 +692,7 @@ export default function GhostScene({ step }) {
                     alignItems: 'center',
                     gap: 4,
                     fontFamily: 'var(--font-mono)',
-                    fontSize: '0.55rem',
+                    fontSize: '0.75rem',
                     color: 'var(--text-inverse)',
                     zIndex: 5,
                     whiteSpace: 'nowrap',
@@ -718,7 +718,7 @@ export default function GhostScene({ step }) {
                     borderRadius: 8,
                     padding: '2px 8px',
                     fontFamily: 'var(--font-mono)',
-                    fontSize: '0.42rem',
+                    fontSize: '0.7rem',
                     color: 'var(--neon-cyan)',
                     whiteSpace: 'nowrap',
                     animation: 'badge-pulse 1.5s ease-in-out infinite',
@@ -740,7 +740,7 @@ export default function GhostScene({ step }) {
                     left: '50%',
                     transform: 'translateX(-50%)',
                     fontFamily: 'var(--font-mono)',
-                    fontSize: '0.5rem',
+                    fontSize: '0.7rem',
                     color: 'var(--amber)',
                     whiteSpace: 'nowrap',
                     zIndex: 5,
@@ -767,7 +767,7 @@ export default function GhostScene({ step }) {
                     alignItems: 'center',
                     gap: 4,
                     fontFamily: 'var(--font-mono)',
-                    fontSize: '0.55rem',
+                    fontSize: '0.75rem',
                     color: 'var(--text-inverse)',
                     zIndex: 5,
                     whiteSpace: 'nowrap',
@@ -866,7 +866,7 @@ export default function GhostScene({ step }) {
                 transition={{ duration: 0.3 }}
                 style={{
                   fontFamily: line.type.startsWith('header') ? 'var(--font-mono)' : 'var(--font-body)',
-                  fontSize: line.type.startsWith('header') ? '0.7rem' : '0.68rem',
+                  fontSize: line.type.startsWith('header') ? '0.7rem' : '0.7rem',
                   color: line.color,
                   lineHeight: 1.6,
                   letterSpacing: line.type.startsWith('header') ? '0.08em' : '0.01em',

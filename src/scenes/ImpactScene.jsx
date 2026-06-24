@@ -287,7 +287,7 @@ function ImpactStat({ stat, index, active }) {
       <div
         style={{
           fontFamily: 'var(--font-body)',
-          fontSize: 'clamp(0.6rem, 1vw, 0.8rem)',
+          fontSize: 'clamp(0.8rem, 1.3vw, 1rem)',
           color: 'var(--text-dim)',
           letterSpacing: '0.12em',
           textTransform: 'uppercase',
@@ -748,7 +748,7 @@ export default function ImpactScene({ step }) {
                     <div
                       style={{
                         fontFamily: 'var(--font-mono)',
-                        fontSize: 'clamp(0.45rem, 0.65vw, 0.55rem)',
+                        fontSize: 'clamp(0.7rem, 1vw, 0.8rem)',
                         color: insight.color,
                         letterSpacing: '0.1em',
                         opacity: 0.7,
@@ -770,7 +770,7 @@ export default function ImpactScene({ step }) {
                       <span
                         style={{
                           fontFamily: 'var(--font-mono)',
-                          fontSize: 'clamp(0.5rem, 0.75vw, 0.6rem)',
+                          fontSize: 'clamp(0.7rem, 1.05vw, 0.85rem)',
                           fontWeight: 400,
                           opacity: 0.6,
                           marginLeft: 4,
@@ -782,7 +782,7 @@ export default function ImpactScene({ step }) {
                     <div
                       style={{
                         fontFamily: 'var(--font-body)',
-                        fontSize: 'clamp(0.45rem, 0.65vw, 0.55rem)',
+                        fontSize: 'clamp(0.7rem, 1vw, 0.8rem)',
                         color: 'var(--text-dim)',
                         lineHeight: 1.4,
                         marginTop: 3,
@@ -827,7 +827,7 @@ export default function ImpactScene({ step }) {
                   transition={{ duration: 0.5 }}
                   style={{
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 'clamp(0.55rem, 0.9vw, 0.7rem)',
+                    fontSize: 'clamp(0.75rem, 1.2vw, 0.95rem)',
                     color: 'var(--text-dim)',
                     textAlign: 'center',
                     marginTop: 16,

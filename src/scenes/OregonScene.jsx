@@ -68,7 +68,7 @@ function MetricBadge({ label, color, data, delay = 0 }) {
       <div
         style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: '0.6rem',
+          fontSize: '0.8rem',
           color,
           letterSpacing: '0.1em',
           marginBottom: 4,
@@ -508,7 +508,7 @@ export default function OregonScene({ step }) {
                     top: -4,
                     left: -12,
                     fontFamily: 'var(--font-mono)',
-                    fontSize: '0.55rem',
+                    fontSize: '0.75rem',
                     color: 'var(--neon-cyan)',
                     letterSpacing: '0.05em',
                   }}
@@ -562,7 +562,7 @@ export default function OregonScene({ step }) {
             <div
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '0.65rem',
+                fontSize: '0.85rem',
                 color: 'var(--text-dim)',
                 textAlign: 'center',
                 marginTop: 6,

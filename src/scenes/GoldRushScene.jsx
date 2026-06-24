@@ -186,7 +186,7 @@ function JobPod({ job, step, queueIndex = 0 }) {
       >
         <span
           style={{
-            fontSize: '7px',
+            fontSize: '11px',
             fontFamily: 'var(--font-mono)',
             color: 'var(--text-inverse)',
             textAlign: 'center',
@@ -424,7 +424,7 @@ export default function GoldRushScene({ step }) {
                     left: screenPos.left - 20,
                     top: screenPos.top - 10,
                     fontFamily: 'var(--font-mono)',
-                    fontSize: '10px',
+                    fontSize: '12px',
                     color: 'var(--neon-red)',
                     textShadow: '0 0 6px rgba(var(--alert-red-rgb), 0.5)',
                     whiteSpace: 'nowrap',
@@ -453,7 +453,7 @@ export default function GoldRushScene({ step }) {
                   getTileCenter(0, 0).z - 40
                 ).top,
                 fontFamily: 'var(--font-body)',
-                fontSize: 'clamp(0.55rem, 0.9vw, 0.7rem)',
+                fontSize: 'clamp(0.75rem, 1.2vw, 0.95rem)',
                 color: 'var(--text-dim)',
                 textShadow: '0 0 4px rgba(var(--text-dim-rgb), 0.3)',
                 whiteSpace: 'nowrap',
@@ -510,7 +510,7 @@ export default function GoldRushScene({ step }) {
                   <XAxis
                     type="number"
                     domain={[0, 100]}
-                    tick={{ fill: 'var(--text-dim)', fontFamily: 'var(--font-mono)', fontSize: 10 }}
+                    tick={{ fill: 'var(--text-dim)', fontFamily: 'var(--font-mono)', fontSize: 12 }}
                     axisLine={{ stroke: 'rgba(var(--text-dim-rgb),0.15)' }}
                     tickLine={false}
                   />
@@ -583,7 +583,7 @@ export default function GoldRushScene({ step }) {
                 <span
                   style={{
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 'clamp(0.6rem, 0.9vw, 0.75rem)',
+                    fontSize: 'clamp(0.8rem, 1.2vw, 1rem)',
                     color: 'var(--text-dim)',
                   }}
                 >
@@ -616,7 +616,7 @@ export default function GoldRushScene({ step }) {
                 <span
                   style={{
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 'clamp(0.6rem, 0.9vw, 0.75rem)',
+                    fontSize: 'clamp(0.8rem, 1.2vw, 1rem)',
                     color: 'var(--text-dim)',
                   }}
                 >

@@ -398,7 +398,7 @@ function GlassCard({ children, color, borderColor, style = {} }) {
         padding: '10px 14px',
         color: color,
         fontFamily: 'var(--font-mono)',
-        fontSize: 'clamp(0.55rem, 0.85vw, 0.72rem)',
+        fontSize: 'clamp(0.75rem, 1.1vw, 0.95rem)',
         lineHeight: 1.5,
         maxWidth: 220,
         boxShadow: `0 0 12px ${borderColor}`,
@@ -589,7 +589,7 @@ export default function GalaxyScene({ step }) {
             <div
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: 'clamp(0.65rem, 1vw, 0.8rem)',
+                fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
                 color: 'var(--neon-gold)',
                 letterSpacing: '0.15em',
                 textShadow: '0 0 10px rgba(var(--neon-gold-rgb),0.4)',
@@ -659,7 +659,7 @@ export default function GalaxyScene({ step }) {
                   borderRadius: 8,
                   padding: '6px 12px',
                   fontFamily: 'var(--font-mono)',
-                  fontSize: 'clamp(0.55rem, 0.85vw, 0.72rem)',
+                  fontSize: 'clamp(0.75rem, 1.1vw, 0.95rem)',
                   color: CLUSTER_UI_COLORS[i],
                   letterSpacing: '0.05em',
                   textShadow: `0 0 8px rgba(${CLUSTER_UI_COLORS_RGB[i]}, 0.27)`,
@@ -691,7 +691,7 @@ export default function GalaxyScene({ step }) {
                   zIndex: 25,
                   pointerEvents: 'none',
                   fontFamily: 'var(--font-mono)',
-                  fontSize: 'clamp(0.45rem, 0.7vw, 0.6rem)',
+                  fontSize: 'clamp(0.7rem, 1vw, 0.85rem)',
                   color: 'var(--neon-gold)',
                   opacity: 0.7,
                   letterSpacing: '0.04em',
@@ -726,7 +726,7 @@ export default function GalaxyScene({ step }) {
             <div
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: 'clamp(0.55rem, 0.85vw, 0.72rem)',
+                fontSize: 'clamp(0.75rem, 1.1vw, 0.95rem)',
                 color: 'var(--text-dim)',
                 letterSpacing: '0.04em',
               }}
@@ -856,7 +856,7 @@ export default function GalaxyScene({ step }) {
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.2 }}
                 style={{
                   fontFamily: 'var(--font-mono)',
-                  fontSize: 'clamp(0.6rem, 0.9vw, 0.78rem)',
+                  fontSize: 'clamp(0.8rem, 1.2vw, 1rem)',
                   color: 'var(--neon-gold)',
                   letterSpacing: '0.04em',
                    textShadow: '0 0 8px rgba(var(--neon-gold-rgb),0.3)',

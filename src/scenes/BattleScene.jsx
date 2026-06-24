@@ -110,7 +110,7 @@ function ErrorRateBlock({ rate, color, show }) {
       <div
         style={{
           fontFamily: 'var(--font-mono)',
-          fontSize: 'clamp(0.5rem, 0.8vw, 0.65rem)',
+          fontSize: 'clamp(0.7rem, 1.1vw, 0.9rem)',
           color: 'var(--text-dim)',
           letterSpacing: '0.1em',
           textTransform: 'uppercase',
@@ -140,7 +140,7 @@ function PodCountLabel({ pods, color, extra, show }) {
     <div
       style={{
         fontFamily: 'var(--font-mono)',
-        fontSize: 'clamp(0.65rem, 1vw, 0.8rem)',
+        fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
         color,
         marginTop: 8,
         letterSpacing: '0.02em',
@@ -148,7 +148,7 @@ function PodCountLabel({ pods, color, extra, show }) {
     >
       Active Pods: {pods}
       {extra && (
-        <span style={{ color: 'var(--neon-gold)', marginLeft: 12, fontSize: 'clamp(0.55rem, 0.85vw, 0.7rem)' }}>
+        <span style={{ color: 'var(--neon-gold)', marginLeft: 12, fontSize: 'clamp(0.75rem, 1.1vw, 0.95rem)' }}>
           {extra}
         </span>
       )}
@@ -384,7 +384,7 @@ export default function BattleScene({ step }) {
               transition={{ duration: 0.8, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: '0.65rem',
+                fontSize: '0.85rem',
                 color: 'var(--text-dim)',
                 letterSpacing: '0.08em',
                 marginBottom: '2vh',
@@ -473,7 +473,7 @@ export default function BattleScene({ step }) {
                           bottom: 60,
                           left: 16,
                           fontFamily: 'var(--font-mono)',
-                          fontSize: 'clamp(0.55rem, 0.85vw, 0.7rem)',
+                          fontSize: 'clamp(0.75rem, 1.1vw, 0.95rem)',
                           color: 'var(--alert-red)',
                           letterSpacing: '0.08em',
                           textTransform: 'uppercase',
@@ -613,7 +613,7 @@ export default function BattleScene({ step }) {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
             style={{
               fontFamily: 'var(--font-mono)',
-              fontSize: '0.65rem',
+              fontSize: '0.85rem',
               color: 'var(--text-dim)',
               letterSpacing: '0.08em',
               marginBottom: '2vh',
@@ -847,7 +847,7 @@ export default function BattleScene({ step }) {
                   <span
                     style={{
                       fontFamily: 'var(--font-mono)',
-                      fontSize: 'clamp(0.65rem, 1vw, 0.8rem)',
+                      fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
                       color: 'var(--text-dim)',
                     }}
                   >
@@ -908,7 +908,7 @@ export default function BattleScene({ step }) {
                   <span
                     style={{
                       fontFamily: 'var(--font-mono)',
-                      fontSize: 'clamp(0.65rem, 1vw, 0.8rem)',
+                      fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
                       color: 'var(--text-dim)',
                     }}
                   >

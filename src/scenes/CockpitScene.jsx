@@ -107,7 +107,7 @@ function CardLabel({ children, color = 'var(--neon-green)' }) {
     <div
       style={{
         fontFamily: 'var(--font-mono)',
-        fontSize: 'clamp(0.55rem, 0.9vw, 0.7rem)',
+        fontSize: 'clamp(0.75rem, 1.2vw, 0.95rem)',
         color,
         letterSpacing: '0.12em',
         textTransform: 'uppercase',
@@ -638,7 +638,7 @@ export default function CockpitScene({ step }) {
                   <div
                     style={{
                       fontFamily: 'var(--font-mono)',
-                      fontSize: '0.65rem',
+                      fontSize: '0.85rem',
                       color: 'var(--soft-purple)',
                       lineHeight: 1.5,
                     }}
@@ -647,7 +647,7 @@ export default function CockpitScene({ step }) {
                     <br />
                     Narrower band = scales aggressively.
                     <br />
-                    <span style={{ color: 'var(--text-dim)', fontSize: '0.6rem' }}>Risk-aware by design.</span>
+                    <span style={{ color: 'var(--text-dim)', fontSize: '0.8rem' }}>Risk-aware by design.</span>
                   </div>
                 </motion.div>
               )}
@@ -720,11 +720,11 @@ export default function CockpitScene({ step }) {
               <div style={{ display: 'flex', gap: 16, marginTop: 4 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                   <div style={{ width: 10, height: 10, borderRadius: 2, background: 'var(--cyan-500)' }} />
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--text-dim)' }}>CPU Pods</span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--text-dim)' }}>CPU Pods</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                   <div style={{ width: 10, height: 10, borderRadius: 2, background: 'var(--soft-purple)' }} />
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.6rem', color: 'var(--text-dim)' }}>GPU Pods</span>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--text-dim)' }}>GPU Pods</span>
                 </div>
               </div>
             </GlassPanel>
@@ -760,7 +760,7 @@ export default function CockpitScene({ step }) {
                     inset: 0,
                     overflowY: 'auto',
                     fontFamily: 'var(--font-mono)',
-                    fontSize: 'clamp(0.55rem, 0.85vw, 0.7rem)',
+                    fontSize: 'clamp(0.75rem, 1.15vw, 0.95rem)',
                     lineHeight: 1.8,
                   }}
                   className="hide-scrollbar"
@@ -820,7 +820,7 @@ export default function CockpitScene({ step }) {
             <div
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: 'clamp(0.6rem, 0.9vw, 0.75rem)',
+                fontSize: 'clamp(0.8rem, 1.2vw, 1rem)',
                 color: 'var(--neon-green)',
                 letterSpacing: '0.08em',
                 marginBottom: 8,
@@ -840,7 +840,7 @@ export default function CockpitScene({ step }) {
             <div
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: 'clamp(0.55rem, 0.8vw, 0.65rem)',
+                fontSize: 'clamp(0.75rem, 1.1vw, 0.9rem)',
                 color: 'var(--text-dim)',
                 marginTop: 8,
                 letterSpacing: '0.04em',
@@ -873,7 +873,7 @@ export default function CockpitScene({ step }) {
             <span
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: 'clamp(0.55rem, 0.8vw, 0.65rem)',
+                fontSize: 'clamp(0.75rem, 1.1vw, 0.9rem)',
                 color: flashSale ? 'var(--alert-red)' : 'var(--text-dim)',
                 letterSpacing: '0.06em',
               }}
@@ -928,7 +928,7 @@ export default function CockpitScene({ step }) {
               borderRadius: 8,
               padding: '8px 14px',
               fontFamily: 'var(--font-mono)',
-              fontSize: 'clamp(0.6rem, 0.9vw, 0.75rem)',
+              fontSize: 'clamp(0.8rem, 1.2vw, 1rem)',
               color: 'var(--text-inverse)',
               fontWeight: 700,
               letterSpacing: '0.06em',
@@ -954,7 +954,7 @@ export default function CockpitScene({ step }) {
               borderRadius: 8,
               padding: '8px 14px',
               fontFamily: 'var(--font-mono)',
-              fontSize: 'clamp(0.6rem, 0.9vw, 0.75rem)',
+              fontSize: 'clamp(0.8rem, 1.2vw, 1rem)',
               color: 'var(--text-inverse)',
               fontWeight: 700,
               letterSpacing: '0.06em',
@@ -987,7 +987,7 @@ export default function CockpitScene({ step }) {
               onClick={() => {}}
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: 'clamp(0.65rem, 1vw, 0.8rem)',
+                fontSize: 'clamp(0.85rem, 1.3vw, 1rem)',
                 color: 'var(--neon-green)',
                 background: 'rgba(var(--neon-green-rgb), 0.1)',
                 border: '1px solid rgba(var(--neon-green-rgb), 0.3)',
@@ -1013,7 +1013,7 @@ export default function CockpitScene({ step }) {
             <div
               style={{
                 fontFamily: 'var(--font-mono)',
-                fontSize: 'clamp(0.5rem, 0.75vw, 0.6rem)',
+                fontSize: 'clamp(0.7rem, 1vw, 0.85rem)',
                 color: 'var(--text-dim)',
                 marginTop: 10,
                 letterSpacing: '0.04em',
