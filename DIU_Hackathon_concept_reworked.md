@@ -1,4 +1,4 @@
-# IntelliScale: AI-Powered Predictive Auto-Scaling & GPU Scheduling for Kubernetes Clusters
+# HPA++: AI-Powered Predictive Auto-Scaling & GPU Scheduling for Kubernetes Clusters
 
 **Forecast-Driven, Confidence-Aware Resource Optimization for Cluster Intelligence**
 
@@ -26,9 +26,9 @@ Organisations face the same reliability–cost trade‑off, now amplified by GPU
 
 ---
 
-## 2. Proposed Solution: IntelliScale
+## 2. Proposed Solution: HPA++
 
-**IntelliScale** now forecasts **CPU, memory, and GPU utilisation** simultaneously, using these predictions for two intelligent actions:
+**HPA++** now forecasts **CPU, memory, and GPU utilisation** simultaneously, using these predictions for two intelligent actions:
 
 1. **Proactive pod scaling** – adjust replica counts for both CPU‑based and GPU‑based deployments *before* demand arrives.
 2. **Predictive GPU scheduling** – anticipate future GPU requirements and pre‑schedule workloads on suitable nodes, minimising queue times and maximising utilisation.
@@ -43,9 +43,9 @@ Organisations face the same reliability–cost trade‑off, now amplified by GPU
 | **Live Monitoring Dashboard** | Streamlit + Plotly UI displaying all predicted metrics, actual vs. predicted, scaling actions, and scheduler decisions. |
 | **Reactive Safety Net** | HPA and default scheduler remain as fallbacks—catching unforeseen spikes and placement failures. |
 
-### 2.2 What Makes IntelliScale Different (updated)
+### 2.2 What Makes HPA++ Different (updated)
 
-| Feature | Traditional HPA + Default Scheduler | IntelliScale |
+| Feature | Traditional HPA + Default Scheduler | HPA++ |
 |---------|--------------------------------------|--------------|
 | **Scaling Timing** | Reactive (after spike) | **Proactive (before spike)** |
 | **GPU‑Aware Scaling** | ✗ (only CPU/memory) | **✓** |
@@ -74,7 +74,7 @@ For GPU metrics, we also considered **NVIDIA DCGM** as the data source, and Prop
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                              INTELLISCALE SYSTEM                               │
+│                              HPA++ SYSTEM                               │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
 │  ┌─────────────────┐    ┌────────────────────┐    ┌─────────────────────────┐ │
@@ -192,7 +192,7 @@ for node in nodes:
 
 ## 8. Comparison with Traditional HPA + Default Scheduler
 
-| Feature | Traditional HPA + Default Scheduler | IntelliScale |
+| Feature | Traditional HPA + Default Scheduler | HPA++ |
 |---------|--------------------------------------|--------------|
 | **Reactive Scaling** | ✓ | ✓ (as safety net) |
 | **Predictive Scaling** | ✗ | ✓ |
@@ -207,7 +207,7 @@ for node in nodes:
 
 ## 9. Real-World Impact & Use Cases (updated)
 
-| Use Case | Challenge | IntelliScale Solution |
+| Use Case | Challenge | HPA++ Solution |
 |----------|-----------|----------------------|
 | **AI Model Training (Scheduled)** | Many teams submit training jobs at specific times; GPU contention causes long queues | Predicts future GPU demand; pre‑schedules jobs to nodes that will have free capacity |
 | **Real‑Time Inference Services** | Inference traffic spikes (e.g., during product launches) | Predicts GPU usage and scales inference pods proactively |
@@ -219,7 +219,7 @@ for node in nodes:
 
 ## 10. Extending to Cluster Intelligence (updated)
 
-IntelliScale already demonstrates **cluster‑level intelligence** by:
+HPA++ already demonstrates **cluster‑level intelligence** by:
 
 - Forecasting **multiple resource types** across the cluster.
 - Making **scheduling decisions** that consider future load.
@@ -258,7 +258,7 @@ We run identical workloads (CPU + GPU) against two configurations:
 | Configuration | Description |
 |---------------|-------------|
 | **Baseline** | Standard HPA (CPU/mem) + default scheduler (no predictive) |
-| **IntelliScale** | Predictive scaling for CPU/mem/GPU + predictive scheduler for GPU |
+| **HPA++** | Predictive scaling for CPU/mem/GPU + predictive scheduler for GPU |
 
 Same Locust load profile; results compared on:
 
@@ -292,14 +292,14 @@ Same Locust load profile; results compared on:
 
 ## 14. Summary
 
-IntelliScale transforms Kubernetes from a reactive platform into a **proactive, intelligence‑driven cluster manager** that understands both CPU and GPU workloads. By combining **multi‑metric forecasting, confidence‑aware decisions, and predictive scheduling**, we deliver:
+HPA++ transforms Kubernetes from a reactive platform into a **proactive, intelligence‑driven cluster manager** that understands both CPU and GPU workloads. By combining **multi‑metric forecasting, confidence‑aware decisions, and predictive scheduling**, we deliver:
 
 - **Reduced latency and error rates** for all workloads.
 - **Higher GPU utilisation** and **shorter job queues**.
 - **Lower infrastructure costs** through proactive scale‑down.
 - **A clear audit trail** for every decision, building trust.
 
-This makes IntelliScale a compelling entry for the **AI for Cluster Intelligence** track—demonstrating practical AI applied to real‑world infrastructure challenges.
+This makes HPA++ a compelling entry for the **AI for Cluster Intelligence** track—demonstrating practical AI applied to real‑world infrastructure challenges.
 
 ---
 

@@ -64,12 +64,12 @@ const CLUSTER_QUADRANT = [
 
 const USE_CASE_CARDS = [
   {
-    text: 'Flash sale? IntelliScale pre-scales all services 5 min before. Zero error rate.',
+    text: 'Flash sale? HPA++ pre-scales all services 5 min before. Zero error rate.',
     color: 'var(--neon-gold)',
     border: 'rgba(var(--neon-gold-rgb), 0.3)',
   },
   {
-    text: 'Overnight idle GPUs? IntelliScale coordinates training job schedules to maximise utilisation.',
+    text: 'Overnight idle GPUs? HPA++ coordinates training job schedules to maximise utilisation.',
     color: 'var(--neon-purple)',
     border: 'rgba(var(--neon-purple-rgb), 0.3)',
   },

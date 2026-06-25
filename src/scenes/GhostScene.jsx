@@ -389,7 +389,7 @@ export default function GhostScene({ step }) {
     { type: 'item', text: '→ Placed on node-04 (88% load)', color: 'var(--neon-red)' },
     { type: 'item', text: '→ Job queued: 4m 23s', color: 'var(--neon-red)' },
     { type: 'item', text: '→ GPU contention: HIGH', color: 'var(--neon-red)' },
-    { type: 'header-ghost', text: 'INTELLISCALE SCHEDULER', color: 'var(--neon-cyan)' },
+    { type: 'header-ghost', text: 'HPA++ SCHEDULER', color: 'var(--neon-cyan)' },
     { type: 'item', text: '→ Predicted node-09 freeing in 47s', color: 'var(--neon-cyan)' },
     { type: 'item', text: '→ Job queued: 0s (pre-bound)', color: 'var(--neon-cyan)' },
     { type: 'item', text: '→ GPU contention: NONE', color: 'var(--neon-cyan)' },

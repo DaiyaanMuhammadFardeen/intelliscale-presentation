@@ -643,7 +643,7 @@ export default function CockpitScene({ step }) {
                       lineHeight: 1.5,
                     }}
                   >
-                    Wider band = IntelliScale acts conservatively.
+                    Wider band = HPA++ acts conservatively.
                     <br />
                     Narrower band = scales aggressively.
                     <br />

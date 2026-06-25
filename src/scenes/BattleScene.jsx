@@ -207,7 +207,7 @@ export default function BattleScene({ step }) {
   const hpaPods = hpaData.length > 0 ? hpaData[hpaData.length - 1].pods : 2
   const intelliPods = intelliData.length > 0 ? intelliData[intelliData.length - 1].pods : 2
 
-  /* ── Current IntelliScale forecast buffer label ── */
+  /* ── Current HPA++ forecast buffer label ── */
   const intelliForecastExtra =
     showWave && intelliPods >= 6 ? 'Forecast Buffer: 2→6 pods staged' :
     showWave ? `Auto-scaled to ${intelliPods} pods` : ''
@@ -577,7 +577,7 @@ export default function BattleScene({ step }) {
           </div>
         </motion.div>
 
-        {/* ══════════ RIGHT HALF — IntelliScale ══════════ */}
+        {/* ══════════ RIGHT HALF — HPA++ ══════════ */}
         <motion.div
           layout
           animate={{ flex: rightFlex }}
@@ -605,7 +605,7 @@ export default function BattleScene({ step }) {
               textAlign: 'right',
             }}
           >
-            INTELLISCALE
+            HPA++
           </motion.div>
           <motion.div
             initial={{ x: 40, opacity: 0 }}
@@ -798,7 +798,7 @@ export default function BattleScene({ step }) {
               HPA Response: 118s
             </div>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--neon-gold)', fontWeight: 700 }}>
-              IntelliScale Response: 0s (pre-scaled)
+              HPA++ Response: 0s (pre-scaled)
             </div>
           </motion.div>
         )}

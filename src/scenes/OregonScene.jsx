@@ -340,7 +340,7 @@ export default function OregonScene({ step }) {
                 letterSpacing: '-0.02em',
               }}
             >
-              IntelliScale doesn't react.
+              HPA++ doesn't react.
             </motion.h2>
           ) : (
             <motion.h2
@@ -356,7 +356,7 @@ export default function OregonScene({ step }) {
                 letterSpacing: '-0.02em',
               }}
             >
-              <span style={{ color: 'var(--text-inverse)' }}>IntelliScale </span>
+              <span style={{ color: 'var(--text-inverse)' }}>HPA++ </span>
               <span
                 style={{
                   background: 'linear-gradient(90deg, var(--gold), var(--light-gold), var(--gold))',
@@ -569,7 +569,7 @@ export default function OregonScene({ step }) {
                 lineHeight: 1.4,
               }}
             >
-              Prophet provides native confidence intervals — IntelliScale only acts when confident
+              Prophet provides native confidence intervals — HPA++ only acts when confident
               enough.
             </div>
           </motion.div>

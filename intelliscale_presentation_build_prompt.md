@@ -1,8 +1,8 @@
-# IntelliScale — Hackathon Web Presentation: Full Build Prompt
+# HPA++ — Hackathon Web Presentation: Full Build Prompt
 
 ## Project Overview
 
-Build a **single-page, full-browser, cinematic hackathon presentation website** for **IntelliScale**, an AI-powered predictive auto-scaling and GPU scheduling system for Kubernetes clusters. The presentation is for **Team Falah** at **DIU** for the **AI for Cluster Intelligence** hackathon track.
+Build a **single-page, full-browser, cinematic hackathon presentation website** for **HPA++**, an AI-powered predictive auto-scaling and GPU scheduling system for Kubernetes clusters. The presentation is for **Team Falah** at **DIU** for the **AI for Cluster Intelligence** hackathon track.
 
 This is NOT a traditional slide deck clone. It is a **living, breathing, interactive simulation** — judges should feel like they are watching a real system operate in real time. Every "page" (called a **Scene**) fills the entire viewport. A global `Enter` key press (or right arrow key) advances the internal step counter of the current scene. Once all steps within a scene are exhausted, the next `Enter` press transitions to the next scene.
 
@@ -12,7 +12,7 @@ The final deliverable is a **Vite + React (JSX)** project using no backend, no S
 
 ## Tech Stack (Exact)
 
-- **Vite + React (JSX)** — `npm create vite@latest intelliscale-presentation -- --template react`
+- **Vite + React (JSX)** — `npm create vite@latest HPA++-presentation -- --template react`
 - **Framer Motion** — all div/component transitions, spring physics, staggered reveals
 - **Three.js + @react-three/fiber + @react-three/drei** — 3D scenes (title screen, architecture, galaxy)
 - **Recharts** — animated SVG line/bar/area charts inside scenes
@@ -85,7 +85,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 - A horizontal scanline effect sweeps top-to-bottom (CSS animation, 2px bright cyan line, 1.5s duration, once).
 - After scanline completes (1.5s), a terminal-style text starts typing character-by-character:
   ```
-  > INITIALIZING INTELLISCALE v1.0...
+  > INITIALIZING HPA++ v1.0...
   > LOADING FORECASTING ENGINE...
   > CONNECTING TO CLUSTER...
   > STATUS: ONLINE ██████████ 100%
@@ -94,7 +94,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 
 **Step 1:**
 - Terminal text fades to 20% opacity and slides to the bottom-left corner, staying as an ambient element.
-- The main title **"IntelliScale"** explodes into existence from the center. Not a fade — it glitch-animates in: rapidly flickers between the real text and scrambled ASCII chars (`#@%!&*^`) for 800ms before "resolving" to the correct text. Implement this with a JS interval that randomizes individual characters, then settles. Font: `Space Grotesk`, weight: 700, size: `clamp(3rem, 8vw, 7rem)`, color: white with a `text-shadow: 0 0 40px #00f5ff, 0 0 80px #00f5ff`.
+- The main title **"HPA++"** explodes into existence from the center. Not a fade — it glitch-animates in: rapidly flickers between the real text and scrambled ASCII chars (`#@%!&*^`) for 800ms before "resolving" to the correct text. Implement this with a JS interval that randomizes individual characters, then settles. Font: `Space Grotesk`, weight: 700, size: `clamp(3rem, 8vw, 7rem)`, color: white with a `text-shadow: 0 0 40px #00f5ff, 0 0 80px #00f5ff`.
 - Subtitle appears 300ms after title resolves, fading up: `"AI-Powered Predictive Auto-Scaling & GPU Scheduling"`. Font: `Space Grotesk` 400, `clamp(1rem, 2.5vw, 1.6rem)`, color: `--text-primary`.
 
 **Step 2:**
@@ -195,13 +195,13 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 
 ## Scene 3: "THE ORACLE" — The Forecasting Engine
 
-**Purpose:** Introduce Prophet forecasting as IntelliScale's core superpower. Make it feel magical.
+**Purpose:** Introduce Prophet forecasting as HPA++'s core superpower. Make it feel magical.
 
 **Background mutation:** Nebula purifies — deep space cyan. Background star field gets slightly brighter. The mood shifts from danger to intelligence.
 
 **Step 0:**
 - Label: `"THE SOLUTION — FORECASTING ENGINE"` in `--neon-cyan`.
-- Headline: `"IntelliScale doesn't react."` fades in from right, settling with spring physics.
+- Headline: `"HPA++ doesn't react."` fades in from right, settling with spring physics.
 - Center stage is completely empty — a dramatic pause before the reveal.
 
 **Step 1:**
@@ -221,11 +221,11 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 
 **Step 3:**
 - A horizontal slider appears below the chart panel, labeled `"FORECAST CONFIDENCE THRESHOLD"`. Dragging it changes the width of the confidence band in real-time (React state `confidenceLevel` 0.5–0.99, mapped to band width). When dragged low, the band widens, the sphere turns amber. When dragged high, the band narrows, the sphere turns bright green.
-- Small label below slider: `"Prophet provides native confidence intervals — IntelliScale only acts when confident enough."`.
+- Small label below slider: `"Prophet provides native confidence intervals — HPA++ only acts when confident enough."`.
 - Four metric badges animate in to the right of the chart: `"CPU%"` (cyan), `"Memory%"` (blue), `"GPU Util%"` (purple), `"GPU Mem%"` (pink). Each has a small sparkline (tiny Recharts LineChart) showing a 10-point forecast. They stagger in 100ms apart.
 
 **Step 4:**
-- Headline morphs: `"IntelliScale doesn't react."` → `"IntelliScale predicts."` The word "predicts" materializes with a golden shimmer.
+- Headline morphs: `"HPA++ doesn't react."` → `"HPA++ predicts."` The word "predicts" materializes with a golden shimmer.
 - The crystal sphere does a single dramatic pulse (scale: 1 → 1.4 → 1 over 0.6s) and its internal color shifts from cyan to gold.
 - A text block fades in below: `"Prophet. Multi-seasonality. Native confidence intervals. Per-metric models. Fast rolling-window retraining."` — each phrase separated by a `|` divider, mono font, dim color.
 
@@ -305,7 +305,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 
 ---
 
-## Scene 5: "THE BATTLE" — HPA vs IntelliScale Simulator
+## Scene 5: "THE BATTLE" — HPA vs HPA++ Simulator
 
 **Purpose:** The most dramatic scene. A real-time side-by-side simulation that judges can watch run. This should feel like a video game battle.
 
@@ -314,7 +314,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 **Step 0:**
 - A dramatic **split-screen** layout materializes. The screen is divided exactly 50/50 vertically by a glowing `2px` vertical line.
 - LEFT HALF: Label `"TRADITIONAL HPA"` in `--neon-red`, top-center. Subtitle: `"Reactive. Blind. Too Late."` in small dim mono.
-- RIGHT HALF: Label `"INTELLISCALE"` in `--neon-cyan`, top-center. Subtitle: `"Proactive. Predicted. Ready."` in small dim mono.
+- RIGHT HALF: Label `"HPA++"` in `--neon-cyan`, top-center. Subtitle: `"Proactive. Predicted. Ready."` in small dim mono.
 - Both halves are dark and empty except for their labels — like two fighters entering an arena.
 - A large `"VS"` label pulses in the center on the dividing line, gold, using a neon sign flicker animation (CSS: `opacity: 1 → 0.6 → 1` at irregular intervals using multiple keyframe stops to simulate neon buzz).
 
@@ -323,18 +323,18 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 - Both charts show the same initial state: flat traffic, 2 pods running. The data is identical on both sides — same starting conditions.
 - Pod count indicators appear below each chart:
   - LEFT: `"Active Pods: 2"` in red.
-  - RIGHT: `"Active Pods: 2"` in cyan, plus a `"Forecast Buffer: 2→6 pods staged"` label in gold — suggesting IntelliScale has ALREADY pre-scaled.
+  - RIGHT: `"Active Pods: 2"` in cyan, plus a `"Forecast Buffer: 2→6 pods staged"` label in gold — suggesting HPA++ has ALREADY pre-scaled.
 
 **Step 2:**
 - Both charts begin animating the SAME traffic wave simultaneously — a massive spike starting from t=0.
 - LEFT (HPA): Pod count stays at 2 for the first 15 data points while traffic climbs. The chart background turns progressively redder. A yellow `"⏱ Waiting for threshold breach..."` label blinks. Error rate counter appears in top-right of left panel, counting up: `0% → 3% → 9% → 18%`.
-- RIGHT (IntelliScale): Pod count JUMPS from 2 → 6 at t=-3 (before the wave). This is shown by the pod counter incrementing and a gold flash animation. The traffic wave hits and the right chart's latency line barely blips. Error rate counter: stays at `0.0%`.
+- RIGHT (HPA++): Pod count JUMPS from 2 → 6 at t=-3 (before the wave). This is shown by the pod counter incrementing and a gold flash animation. The traffic wave hits and the right chart's latency line barely blips. Error rate counter: stays at `0.0%`.
 - The contrast is visceral and unmistakable.
 
 **Step 3:**
 - LEFT: The error rate hits 18.3%. The entire LEFT half shakes (CSS shake keyframe). A red `"SERVICE DEGRADED"` banner drops from the top of the left panel. The traffic chart's peak zone shows a red hatched fill area labeled `"REQUEST DROP ZONE"`.
-- RIGHT: The IntelliScale side glows with a golden pulse. A green `"ALL REQUESTS SERVED"` banner appears. The pod count begins scaling back DOWN gracefully after the wave passes (from 6 → 4 → 2 as traffic drops). A label: `"Auto scale-down: 15% cost savings."`.
-- A stopwatch appears between the two halves on the divider line, showing `"HPA Response: 118s"` in red vs `"IntelliScale Response: 0s (pre-scaled)"` in gold.
+- RIGHT: The HPA++ side glows with a golden pulse. A green `"ALL REQUESTS SERVED"` banner appears. The pod count begins scaling back DOWN gracefully after the wave passes (from 6 → 4 → 2 as traffic drops). A label: `"Auto scale-down: 15% cost savings."`.
+- A stopwatch appears between the two halves on the divider line, showing `"HPA Response: 118s"` in red vs `"HPA++ Response: 0s (pre-scaled)"` in gold.
 
 **Step 4:**
 - The real-time simulation "freezes" (data stops animating). A scoreboard slides down from the top of each half:
@@ -345,7 +345,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 
 **Step 5:**
 - The LEFT half fades to 30% opacity and desaturates to near-grayscale using CSS filter.
-- The RIGHT half (IntelliScale) expands to fill 70% of the screen with a smooth Framer Motion layout animation.
+- The RIGHT half (HPA++) expands to fill 70% of the screen with a smooth Framer Motion layout animation.
 - Single large caption: `"30–50% faster response. Zero error rate during flash spikes."` in white, center.
 
 **Max steps: 6**
@@ -374,7 +374,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 
 **Step 2:**
 - A rewind effect plays: the pod un-lands from `node-04` and floats back to the top (Framer Motion `exit` animation, reversed). A diagonal "REWIND" stamp briefly appears in the corner.
-- Now the **IntelliScale Predictive Scheduler** takes over. The grid updates:
+- Now the **HPA++ Predictive Scheduler** takes over. The grid updates:
   - A `"⏱ FORECAST HORIZON: +5 minutes"` banner fades in over the grid.
   - Each node tile updates to show TWO values: `"Now: 85%"` and `"In 5min: 12%"` (with a small downward arrow, green color). This is the forecast-aware view.
   - `node-09` currently shows `"Now: 88%"` but `"In 5min: 8% (job finishing)"`. It is highlighted with a cyan "PREDICTED AVAILABLE" badge.
@@ -393,7 +393,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
   → Job queued: 4m 23s
   → GPU contention: HIGH
   
-  INTELLISCALE SCHEDULER:
+  HPA++ SCHEDULER:
   → Predicted node-09 freeing in 47s
   → Job queued: 0s (pre-bound)
   → GPU contention: NONE
@@ -489,12 +489,12 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 - Caption: `"Operators can replay any window to audit every scaling and scheduling decision."`.
 
 **Step 2:**
-- A **"FLASH SALE EVENT"** toggle button appears in the top-right corner. Clicking it injects a traffic spike into the synthetic data — all charts immediately show the spike beginning. The forecast lines show the predicted peak. Pod counts in the bar chart begin increasing ahead of the spike (the IntelliScale pre-scale behavior). Decision log floods with new scale-up entries.
+- A **"FLASH SALE EVENT"** toggle button appears in the top-right corner. Clicking it injects a traffic spike into the synthetic data — all charts immediately show the spike beginning. The forecast lines show the predicted peak. Pod counts in the bar chart begin increasing ahead of the spike (the HPA++ pre-scale behavior). Decision log floods with new scale-up entries.
 - A red flashing badge: `"⚡ TRAFFIC SURGE DETECTED"` appears momentarily in the top-right corner then fades to a calm green `"✅ PRE-SCALED AND READY"`.
 
 **Step 3:**
 - The dashboard zooms in on Card 2 (GPU chart) using Framer Motion layout animation — it expands to fill the top 60% of the screen. The GPU forecast line shows a predicted spike, and the confidence band is visible.
-- A callout annotation arrow points to the confidence band: `"Wider band = IntelliScale acts conservatively. Narrower band = scales aggressively. Risk-aware by design."`.
+- A callout annotation arrow points to the confidence band: `"Wider band = HPA++ acts conservatively. Narrower band = scales aggressively. Risk-aware by design."`.
 
 **Step 4:**
 - Dashboard zooms back out to full layout. All 4 cards are visible.
@@ -510,7 +510,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 
 ## Scene 9: "THE GALAXY" — Cluster Intelligence Future Vision
 
-**Purpose:** Zoom out dramatically to show IntelliScale's potential at scale. End on an inspiring, epic note before the finale.
+**Purpose:** Zoom out dramatically to show HPA++'s potential at scale. End on an inspiring, epic note before the finale.
 
 **Background mutation:** Full Three.js takeover. Star field explodes in density (particle count triples). A galaxy-like structure begins forming.
 
@@ -529,20 +529,20 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 - Each cluster's label card is a small glassmorphism div positioned as a CSS overlay using the cluster's projected 3D coordinates converted to 2D screen coords.
 
 **Step 2:**
-- Glowing golden "intelligence beams" animate from a central node (labeled `"IntelliScale Brain"` — a larger, brighter cluster in the center) outward to each of the 4 clusters. These beams are Three.js `Line` objects or CSS SVG overlays. They pulse with traveling particles.
+- Glowing golden "intelligence beams" animate from a central node (labeled `"HPA++ Brain"` — a larger, brighter cluster in the center) outward to each of the 4 clusters. These beams are Three.js `Line` objects or CSS SVG overlays. They pulse with traveling particles.
 - Each beam shows a data label traveling along it: `"Forecast distributed"`, `"Schedules optimized"`, `"Costs minimized"`.
 - Caption: `"Multi-cluster workload coordination. Global resource optimization."`.
 
 **Step 3:**
 - Four "use case" cards materialize next to their respective clusters (positioned in CSS as overlays). Each card is a glassmorphism panel with:
-  - **E-Commerce:** `"Flash sale? IntelliScale pre-scales all services 5 min before. Zero error rate."`
-  - **University:** `"Overnight idle GPUs? IntelliScale coordinates training job schedules to maximize utilisation."`
+  - **E-Commerce:** `"Flash sale? HPA++ pre-scales all services 5 min before. Zero error rate."`
+  - **University:** `"Overnight idle GPUs? HPA++ coordinates training job schedules to maximize utilisation."`
   - **FinTech:** `"Fraud detection inference? Pre-scaled before market opens every morning."`
   - **Real-Time Inference:** `"Traffic spike? Pre-placed inference pods. P99 latency unchanged."`
 - Cards animate in with Framer Motion stagger.
 
 **Step 4:**
-- The central `"IntelliScale Brain"` cluster explodes in a bright flash, revealing a glowing neural network SVG (animated, nodes connected by pulses) replacing the cluster dot. The network slowly animates with traveling signals.
+- The central `"HPA++ Brain"` cluster explodes in a bright flash, revealing a glowing neural network SVG (animated, nodes connected by pulses) replacing the cluster dot. The network slowly animates with traveling signals.
 - Headline morphs: `"One cluster is just the beginning."` → `"Cluster-Wide Resource Intelligence."`.
 - Three future roadmap items fade in below the headline: `"→ Node-level forecasting"`, `"→ Reinforcement learning scheduler"`, `"→ Multi-cluster federation"` — each in dim mono, staggering in 200ms apart.
 
@@ -583,7 +583,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 - Below the divider, the tagline fades in, word by word with 150ms stagger:
   `"Proactive."` (cyan) — pause — `"Risk-Aware."` (gold) — pause — `"Intelligent."` (white) — full stop.
 - Each word is large (`clamp(1.5rem, 4vw, 3rem)`), `Space Grotesk 700`.
-- The `"IntelliScale"` logo/wordmark rebuilds from particles below the tagline (use a canvas particle system where particles converge from random positions to form the text shape using a pixel-sampling technique on a hidden canvas containing the text). ~300 particles, 1.5s animation.
+- The `"HPA++"` logo/wordmark rebuilds from particles below the tagline (use a canvas particle system where particles converge from random positions to form the text shape using a pixel-sampling technique on a hidden canvas containing the text). ~300 particles, 1.5s animation.
 
 **Step 3:**
 - The five stat numbers get a secondary treatment: a thin progress bar appears under each number, filling to its represented percentage from left to right over 0.8s. Left half of bar is baseline color (dim red), right half overflows in accent color — visually showing the improvement.
@@ -597,9 +597,9 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 **Step 5:**
 - If Enter is pressed on Step 4, a **credit sequence** briefly appears: the screen fades to black, then three lines type in mono:
   ```
-  > IntelliScale v1.0
+  > HPA++ v1.0
   > Built by Team Falah — DIU
-  > "Making clusters intelligent."
+  > "Dont Be Reactive. Be Predictive"
   ```
   Then it loops back to Scene 0 (the title screen) — the presentation becomes a seamless loop for showcase display.
 
@@ -611,7 +611,7 @@ A thin `2px` horizontal progress bar at the very top of the viewport (full width
 
 ### File Structure
 ```
-intelliscale-presentation/
+HPA++-presentation/
 ├── src/
 │   ├── main.jsx
 │   ├── App.jsx                    // Global state: currentScene, currentStep, keyhandler
@@ -754,7 +754,7 @@ For the video recording, also support mouse click anywhere (except interactive e
 1. **Full viewport** at ALL times — no scrollbars, no overflow, `overflow: hidden` on `body` and `html`.
 2. **No white flash** between scenes — the background star field canvas persists without remounting between scene transitions.
 3. **All charts use real animated data** — no static images, no lorem ipsum numbers. All data must be pre-generated synthetic but realistic time-series data.
-4. **No placeholder UI** — every glassmorphism panel, every chart, every label has real content from the IntelliScale concept.
+4. **No placeholder UI** — every glassmorphism panel, every chart, every label has real content from the HPA++ concept.
 5. **Step gating is strict** — content for step N+1 must be completely invisible (not just transparent) until step N+1 is reached. Use `AnimatePresence` with `mode="wait"` where needed.
 6. **The Battle scene (Scene 5) must truly be a live simulation** — both sides animate simultaneously in real-time, not statically. The contrast must be unmissable.
 7. **The Dashboard scene (Scene 8) must be interactive** — the time scrubber and flash sale toggle must actually work and change the chart data.

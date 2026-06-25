@@ -47,7 +47,7 @@ function buildLookupTable() {
     const hpaErrorRate =
       hpaPods < hpaCapacity ? 0 : (traffic * 8 - hpaPods) / (traffic * 8);
 
-    // —— IntelliScale side ——
+    // —— HPA++ side ——
     let intelliPods;
     // start at 2, jump to 6 at t=0
     if (i < 1) {

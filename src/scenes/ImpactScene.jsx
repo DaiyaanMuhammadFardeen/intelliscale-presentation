@@ -87,7 +87,7 @@ const INSIGHTS = [
 ]
 
 /* ══════════════════════════════════════════════════════════════
-   Particle Logo — renders "IntelliScale" from animated particles
+   Particle Logo — renders "HPA++" from animated particles
    ══════════════════════════════════════════════════════════════ */
 
 function ParticleLogo({ active }) {
@@ -113,7 +113,7 @@ function ParticleLogo({ active }) {
     ctx.fillStyle = 'white'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.fillText('IntelliScale', W / 2, H / 2)
+    ctx.fillText('HPA++', W / 2, H / 2)
 
     const imageData = ctx.getImageData(0, 0, W * 2, H * 2)
     const px = imageData.data
@@ -178,7 +178,7 @@ function ParticleLogo({ active }) {
         ctx.fillStyle = '#0891b2'
         ctx.shadowColor = 'rgba(8,145,178,0.5)'
         ctx.shadowBlur = 20
-        ctx.fillText('IntelliScale', W / 2, H / 2)
+        ctx.fillText('HPA++', W / 2, H / 2)
         ctx.shadowBlur = 0
       }
     }
@@ -907,7 +907,7 @@ export default function ImpactScene({ step }) {
             {creditLines >= 1 && (
               <div style={{ fontSize: 'clamp(0.8rem, 1.3vw, 1rem)', color: 'var(--neon-green)' }}>
                 <Typewriter
-                  text="> IntelliScale v1.0"
+                  text="> HPA++ v1.0"
                   speed={45}
                   active={creditLines >= 1}
                   style={{ color: 'var(--neon-green)' }}
@@ -927,7 +927,7 @@ export default function ImpactScene({ step }) {
             {creditLines >= 3 && (
               <div style={{ fontSize: 'clamp(0.8rem, 1.3vw, 1rem)', color: 'var(--neon-gold)' }}>
                 <Typewriter
-                  text='> "Making clusters intelligent."'
+                  text='> "Dont Be Reactive. Be Predictive"'
                   speed={45}
                   active={creditLines >= 3}
                   style={{ color: 'var(--neon-gold)' }}

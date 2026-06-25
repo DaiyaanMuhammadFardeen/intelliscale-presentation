@@ -1,12 +1,12 @@
-# IntelliScale
+# HPA++
 
-An immersive, interactive presentation showcasing **IntelliScale** — an AI-powered cluster intelligence platform built for the DIU Hackathon by **Team Falah**.
+An immersive, interactive presentation showcasing **HPA++** — an AI-powered cluster intelligence platform built for the DIU Hackathon by **Team Falah**.
 
-The presentation walks through the problem of reactive cloud scaling, the gold rush of GPU costs, and how IntelliScale uses predictive AI, reinforcement learning, and neural orchestration to make clusters intelligent.
+The presentation walks through the problem of reactive cloud scaling, the gold rush of GPU costs, and how HPA++ uses predictive AI, reinforcement learning, and neural orchestration to make clusters intelligent.
 
 ## Features
 
-- **11 animated scenes** — each telling part of the IntelliScale story with step-by-step reveals
+- **11 animated scenes** — each telling part of the HPA++ story with step-by-step reveals
 - **3D particle star field** — persistent Three.js background with slow-rotating torus knot
 - **Live Recharts visualizations** — line charts, area charts, bar charts with animated data
 - **Glassmorphism UI** — frosted-glass panels with dark-theme contrast
@@ -17,7 +17,7 @@ The presentation walks through the problem of reactive cloud scaling, the gold r
 
 | # | Scene | Story |
 |---|-------|-------|
-| 1 | **Ignition** | Title sequence with IntelliScale branding |
+| 1 | **Ignition** | Title sequence with HPA++ branding |
 | 2 | **Tsunami** | Traffic surge simulation — the scaling problem |
 | 3 | **Gold Rush** | GPU cost burning — the financial pressure |
 | 4 | **Oracle** | Predictive intelligence introduction |

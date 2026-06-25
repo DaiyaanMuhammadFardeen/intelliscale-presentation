@@ -4,7 +4,7 @@ import { useBackgroundMutation } from '../components/BackgroundContext'
 
 const GLITCH_CHARS = '#@%!&*^'
 const TERMINAL_LINES = [
-  '> INITIALIZING INTELLISCALE v1.0...',
+  '> INITIALIZING HPA++ v1.0...',
   '> LOADING FORECASTING ENGINE...',
   '> CONNECTING TO CLUSTER...',
   '> STATUS: ONLINE ██████████ 100%',
@@ -120,7 +120,7 @@ function TerminalBoot({ visible }) {
 // ─── Step 1: Glitch Title ───
 
 function GlitchTitle({ trigger }) {
-  const TITLE = 'IntelliScale'
+  const TITLE = 'HPA++'
   const [chars, setChars] = useState(() => TITLE.split('').map(glitchChar))
   const [resolved, setResolved] = useState(false)
 
@@ -176,9 +176,9 @@ function GlitchTitle({ trigger }) {
 // ─── Step 2: Stat Badges ───
 
 const BADGES = [
-  { text: '30–50% FASTER SCALING', color: 'var(--neon-cyan)' },
-  { text: '40–60% LOWER GPU QUEUE TIME', color: 'var(--neon-purple)' },
-  { text: '15–25% LESS RESOURCE WASTE', color: 'var(--neon-gold)' },
+  { text: 'FASTER SCALING', color: 'var(--neon-cyan)' },
+  { text: 'LOWER GPU QUEUE TIME', color: 'var(--neon-purple)' },
+  { text: 'LESS RESOURCE WASTE', color: 'var(--neon-gold)' },
 ]
 
 function StatBadges({ visible }) {
@@ -192,6 +192,8 @@ function StatBadges({ visible }) {
         marginTop: '32px',
         position: 'relative',
         zIndex: 15,
+        // paddingTop: '36vh'
+        // translateY:'-50%'
       }}
     >
       {BADGES.map((badge, i) => (
@@ -295,6 +297,87 @@ function EnterPrompt({ visible }) {
   )
 }
 
+// ─── Step 3: Team Panel ───
+
+const TEAM_MEMBERS = [
+  { name: 'Sanzida Chowdhury Dristee', id: '222-15-6382', tag: 'Alumni' },
+  { name: 'Daiyaan Muhammad Fardeen', id: '222-15-6531', tag: 'Alumni' },
+  { name: 'Ahmed Farhanur Rashid', id: '0242310005101839', tag: null },
+]
+
+function TeamPanel({ visible }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: '-50%', y: 20 }}
+      animate={visible ? { opacity: 1, x: '-50%', y: 0 } : { opacity: 0, x: '-50%', y: 20 }}
+      transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+      style={{
+        position: 'absolute',
+        left: '50%',
+        bottom: '110px',
+        fontFamily: 'var(--font-mono)',
+        fontSize: 'clamp(0.55rem, 0.9vw, 0.75rem)',
+        color: 'var(--text-dim)',
+        lineHeight: 2,
+        zIndex: 20,
+        backdropFilter: 'blur(8px)',
+        WebkitBackdropFilter: 'blur(8px)',
+        background: 'rgba(var(--bright-cyan-rgb), 0.03)',
+        border: '1px solid rgba(var(--bright-cyan-rgb), 0.12)',
+        borderRadius: '8px',
+        padding: '16px 24px',
+        minWidth: '300px',
+      }}
+    >
+      <div
+        style={{
+          color: 'var(--neon-cyan)',
+          fontSize: 'clamp(0.65rem, 1vw, 0.85rem)',
+          fontWeight: 600,
+          letterSpacing: '0.08em',
+          marginBottom: '6px',
+          textTransform: 'uppercase',
+          textShadow: '0 0 8px var(--neon-cyan)',
+        }}
+      >
+        {'>>> TEAM FALAH'}
+      </div>
+      <div
+        style={{
+          borderTop: '1px solid rgba(var(--bright-cyan-rgb), 0.15)',
+          marginBottom: '8px',
+        }}
+      />
+      {TEAM_MEMBERS.map((m) => (
+        <div
+          key={m.id}
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            gap: '16px',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          <span style={{ color: 'var(--text-primary)' }}>{m.name}</span>
+          <span style={{ color: 'var(--text-dim)', flexShrink: 0 }}>
+            {m.id}{m.tag ? ' (' + m.tag + ')' : ''}
+          </span>
+        </div>
+      ))}
+      <div
+        style={{
+          borderTop: '1px solid rgba(var(--bright-cyan-rgb), 0.15)',
+          marginTop: '8px',
+          marginBottom: '4px',
+        }}
+      />
+      <div style={{ color: 'var(--text-dim)', fontSize: '0.65rem', letterSpacing: '0.04em' }}>
+        DIU | AI for Cluster Intelligence
+      </div>
+    </motion.div>
+  )
+}
+
 // ─── Main Scene ───
 
 export default function TitleScene({ step }) {
@@ -343,6 +426,7 @@ export default function TitleScene({ step }) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
+          // paddingBottom: '18vh',
         }}
       >
         <GlitchTitle trigger />
@@ -363,6 +447,7 @@ export default function TitleScene({ step }) {
           AI-Powered Predictive Auto-Scaling &amp; GPU Scheduling
         </motion.p>
         <StatBadges visible />
+        <TeamPanel visible />
       </motion.div>
     )
   }
@@ -379,6 +464,7 @@ export default function TitleScene({ step }) {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        paddingBottom: '48vh',
       }}
     >
       <style>{`
@@ -428,7 +514,7 @@ export default function TitleScene({ step }) {
               whiteSpace: 'pre',
             }}
           >
-            {'> INITIALIZING INTELLISCALE v1.0...\n'}
+            {'> INITIALIZING HPA++ v1.0...\n'}
             {'> LOADING FORECASTING ENGINE...\n'}
             {'> CONNECTING TO CLUSTER...\n'}
             {'> STATUS: ONLINE ██████████ 100%'}
@@ -476,6 +562,9 @@ export default function TitleScene({ step }) {
 
       {/* Step 3: Enter prompt bottom-center */}
       <EnterPrompt visible={step >= 3} />
+
+      {/* Step 3: Team info panel bottom-right */}
+      <TeamPanel visible={step >= 3} />
     </div>
   )
 }

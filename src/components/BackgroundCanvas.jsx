@@ -63,7 +63,7 @@ function TorusKnot({ speed, opacity }) {
   })
 
   return (
-    <mesh ref={meshRef} scale={4} position={[0, 0, -15]}>
+    <mesh ref={meshRef} scale={6} position={[0, 0, -15]}>
       <torusKnotGeometry args={[2, 0.6, 128, 16]} />
       <meshBasicMaterial
         color="var(--neon-cyan)"
