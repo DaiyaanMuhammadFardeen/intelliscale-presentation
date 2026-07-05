@@ -5,7 +5,7 @@ const AUTO_PLAY_DELAY = 4000; // ms between auto-advance steps
 export function useSceneManager(sceneConfigs) {
   const [currentScene, setCurrentScene] = useState(0);
   const [step, setStep] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(false);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const timerRef = useRef(null);
   const sceneRef = useRef(currentScene);
   const stepRef = useRef(step);
