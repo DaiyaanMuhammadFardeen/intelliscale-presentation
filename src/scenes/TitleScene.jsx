@@ -300,9 +300,9 @@ function EnterPrompt({ visible }) {
 // ─── Step 3: Team Panel ───
 
 const TEAM_MEMBERS = [
-  { name: 'Sanzida Chowdhury Dristee', id: '222-15-6382', tag: 'Alumni' },
+  { name: 'Sanzida Chowdhury Dristee', id: '222-15-6281', tag: 'Alumni' },
+  { name: 'Ahmed Farhanur Rashid', id: '0242310005101839', tag: 'Student' },
   { name: 'Daiyaan Muhammad Fardeen', id: '222-15-6531', tag: 'Alumni' },
-  { name: 'Ahmed Farhanur Rashid', id: '0242310005101839', tag: null },
 ]
 
 function TeamPanel({ visible }) {
