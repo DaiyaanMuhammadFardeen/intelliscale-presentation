@@ -2,8 +2,16 @@ import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 
 const AUTO_PLAY_DELAY = 4000; // ms between auto-advance steps
 
+function getSceneIndexFromHash(sceneConfigs) {
+  if (typeof window === 'undefined') return 0;
+
+  const slug = window.location.hash.replace(/^#\/?/, '').replace(/\/$/, '').toLowerCase();
+  const index = sceneConfigs.findIndex((scene) => scene.slug === slug);
+  return index >= 0 ? index : 0;
+}
+
 export function useSceneManager(sceneConfigs) {
-  const [currentScene, setCurrentScene] = useState(0);
+  const [currentScene, setCurrentScene] = useState(() => getSceneIndexFromHash(sceneConfigs));
   const [step, setStep] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const timerRef = useRef(null);
@@ -77,11 +85,6 @@ export function useSceneManager(sceneConfigs) {
     }
   }, [step, currentScene, sceneConfigs]);
 
-  const goToScene = useCallback((index) => {
-    setCurrentScene(index);
-    setStep(0);
-  }, []);
-
   /* ─── Auto-Play Logic ─── */
   const stopAutoPlay = useCallback(() => {
     if (timerRef.current) {
@@ -106,6 +109,43 @@ export function useSceneManager(sceneConfigs) {
       }
     });
   }, []);
+
+  const goToScene = useCallback((index) => {
+    const scene = sceneConfigs[index];
+    if (!scene) return;
+
+    if (window.location.hash === `#${scene.slug}`) {
+      setCurrentScene(index);
+      setStep(0);
+      stopAutoPlay();
+      return;
+    }
+
+    window.location.hash = scene.slug;
+  }, [sceneConfigs, stopAutoPlay]);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const nextScene = getSceneIndexFromHash(sceneConfigs);
+      setCurrentScene(nextScene);
+      setStep(0);
+      stopAutoPlay();
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [sceneConfigs, stopAutoPlay]);
+
+  useEffect(() => {
+    const slug = sceneConfigs[currentScene]?.slug;
+    if (!slug || window.location.hash === `#${slug}`) return;
+
+    window.history.replaceState(
+      null,
+      '',
+      `${window.location.pathname}${window.location.search}#${slug}`
+    );
+  }, [currentScene, sceneConfigs]);
 
   // When isAutoPlaying changes, manage the interval
   useEffect(() => {
