@@ -70,7 +70,7 @@ export default function SEO({ scene = 'default' }) {
   }
 
   const config = seoConfig[scene] || seoConfig.default
-  const siteUrl = 'https://intelliscale.dev'
+  const siteUrl = 'https://intelliscale-presentation.vercel.app'
 
   return (
     <Helmet>
